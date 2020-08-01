@@ -1,0 +1,12 @@
+{% extends "idpdatacollection/base.html" %}
+{% block content %}
+<h1> Servers </h1>
+
+    {% for server in servers %}
+        <li> Server ID: {{server.server_id}} </li>
+        <li> Server Name: {{server.server_name}} </li>
+        <li> Server EndpointURL: <a href="#">{{server.endpoint_url}} </a></li> <input type="button" class="chkstatus_btn" value="Check Status" id="btnChkStatus">
+        <li> Server Desc.: {{server.server_description}} </li>
+
+    {% endfor %}
+{%endblock content %}
